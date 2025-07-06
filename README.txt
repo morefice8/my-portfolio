@@ -1,32 +1,37 @@
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Michele Orefice - Football Data Analyst Portfolio
 
+## Welcome!
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image (with a new parallax implementation I'm testing) and scroll effects (powered by
-Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
-that fulfills a few user requests and makes use of some new techniques I've been wanting
-to try out. Enjoy it :)
+This repository contains the source code for my personal portfolio website, designed to showcase my skills and projects in football data analytics. The site is live and can be viewed at:
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+**[https://github.com/morefice8/my-portfolio/](https://github.com/morefice8/my-portfolio)** 
 
-(* = not included)
+---
 
-AJ
-aj@lkn.io | @ajlkn
+## 🚀 About This Portfolio
 
+This website serves as a central hub for my work, demonstrating my expertise in data analysis, visualization, and building data-driven tools for the football industry. It features a curated selection of my key projects, including:
 
-Credits:
+*   **Match Explorer:** A comprehensive tactical analysis platform developed with Python and Dash.
+*   **Player & Ball Tracking:** A computer vision project using YOLOv8 to extract player tracking data from video.
+*   **Automated Reporting Pipeline:** An end-to-end automated data collection and reporting system built in R.
+*   **Database Design:** Projects demonstrating my skills in SQL and relational database management.
 
-	Demo Images:
-		Unsplash (unsplash.com)
+---
 
-	Icons:
-		Font Awesome (fontawesome.io)
+## 🛠️ Technologies Used
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+This portfolio was built using a combination of modern web technologies and is based on the "Massively" template by [HTML5 UP](https://html5up.net/).
+
+*   **Frontend:** HTML5, CSS3
+*   **Contact Form:** Powered by [FormSubmit](https://formsubmit.co/)
+*   **Hosting:** Deployed via [GitHub Pages](https://pages.github.com/)
+
+---
+
+## 🔗 Find Me Online
+
+*   **LinkedIn:** [linkedin.com/in/micheleorefice](https://www.linkedin.com/in/micheleorefice/)
+*   **GitHub:** [github.com/morefice8](https://github.com/morefice8)
+
+Thank you for visiting!
