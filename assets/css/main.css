@@ -4859,3 +4859,18 @@ footer#contact {
         height: 20rem; /* Altezza più contenuta su schermi piccoli */
     }
 }
+
+/* 6. STYLING FOR LANGUAGE SWITCHER BUTTONS */
+/*---------------------------------------------*/
+footer#contact .actions {
+    margin-left: 0; /* Rimuove il margine negativo di default per allinearli bene */
+}
+
+footer#contact .actions li {
+    padding-left: 0.5em; /* Riduce lo spazio tra i pulsanti */
+    padding-right: 0.5em;
+}
+
+footer#contact .actions li:first-child {
+    padding-left: 0; /* Rimuove lo spazio extra dal primo pulsante */
+}
