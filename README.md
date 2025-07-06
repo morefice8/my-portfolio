@@ -4,7 +4,7 @@
 
 This repository contains the source code for my personal portfolio website, designed to showcase my skills and projects in football data analytics. The site is live and can be viewed at:
 
-**[https://github.com/morefice8/my-portfolio/](https://github.com/morefice8/my-portfolio)** 
+**[https://morefice8.github.io/my-portfolio/](https://morefice8.github.io/my-portfolio/)** 
 
 ---
 
