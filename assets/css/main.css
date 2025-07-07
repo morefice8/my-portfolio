@@ -4874,3 +4874,92 @@ footer#contact .actions li {
 footer#contact .actions li:first-child {
     padding-left: 0; /* Rimuove lo spazio extra dal primo pulsante */
 }
+
+/* 7. LANGUAGE SWITCHER IN NAVIGATION (FINAL VERSION) */
+/*----------------------------------------------------*/
+
+/* --- Stile per il separatore (VISIBILE SOLO SU DESKTOP) --- */
+#nav .links .language-sep {
+	opacity: 0.35;
+	padding: 0 0.5em;
+	align-self: center; /* Allinea verticalmente il separatore */
+}
+
+/* --- Stile per i link delle lingue (DESKTOP) --- */
+#nav .links li a[class*="lang-"] {
+	font-size: 0.8rem;
+	font-weight: 700;
+	padding: 0 0.75em;
+	opacity: 0.75;
+	display: flex;
+	align-items: center;
+	transition: opacity 0.2s ease-in-out; /* Aggiunge transizione fluida */
+}
+
+#nav .links li.active a[class*="lang-"] {
+	background-color: transparent;
+	color: #ffffff !important;
+	opacity: 1;
+}
+
+#nav .links li:not(.active) a[class*="lang-"]:hover {
+	background-color: transparent; /* Rimuove lo sfondo hover per un look più pulito */
+	opacity: 1;
+}
+
+/* Aggiunge la bandiera prima del testo */
+#nav .links li a[class*="lang-"]::before {
+	content: '';
+	display: inline-block;
+	width: 1.3em;  /* Leggermente più largo */
+	height: 1.3em; /* Altezza uguale alla larghezza per un aspect-ratio corretto */
+	margin-right: 0.7em;
+	background-size: contain; /* Usa 'contain' invece di 'cover' per non tagliare l'immagine */
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 2px;
+}
+
+/* --- Stile per il pannello mobile (generato da JS) --- */
+
+/* NASCONDE IL SEPARATORE '|' SOLO NEL PANNELLO MOBILE */
+#navPanel .links .language-sep {
+	display: none;
+}
+
+#navPanel .links li a[class*="lang-"] {
+	font-size: 0.9rem;
+	font-weight: 900;
+	color: #909498;
+	display: flex; 
+	align-items: center;
+	padding: 0.75rem 0;
+	border-left: solid 5px transparent; /* Aggiunge uno spazio per l'indicatore */
+	transition: border-left-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* INDICA LA LINGUA ATTIVA NEL MENU MOBILE */
+#navPanel .links li.active a[class*="lang-"] {
+	color: #18bfef; /* Colore highlight per il testo */
+	border-left-color: #18bfef; /* Bordo colorato a sinistra come indicatore */
+}
+
+/* Aggiunge le bandiere anche al menu mobile */
+#navPanel .links li a[class*="lang-"]::before {
+	content: '';
+	display: inline-block;
+	width: 1.4em; /* Leggermente più largo */
+	height: 1.1em; /* Altezza proporzionata */
+	margin-right: 0.8em;
+	background-size: contain; /* Usa 'contain' per non tagliare */
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 3px;
+}
+
+/* --- Dati delle immagini delle bandiere (incorporati come URL dati) --- */
+/* (Questa parte rimane identica) */
+#nav .links a.lang-en::before, #navPanel .links a.lang-en::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='a'%3E%3Cpath d='M0 0h60v30H0z'/%3E%3C/clipPath%3E%3Cg clip-path='url(%23a)'%3E%3Cpath d='M0 0v30h60V0z' fill='%23012169'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0 0l60 30m0-30L0 30' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30 0v30M0 15h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
+#nav .links a.lang-it::before, #navPanel .links a.lang-it::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 10'%3E%3Cpath fill='%23009246' d='M0 0h5v10H0z'/%3E%3Cpath fill='%23fff' d='M5 0h5v10H5z'/%3E%3Cpath fill='%23ce2b37' d='M10 0h5v10h-5z'/%3E%3C/svg%3E"); }
+#nav .links a.lang-es::before, #navPanel .links a.lang-es::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 750 500'%3E%3Cpath fill='%23c60b1e' d='M0 0h750v500H0z'/%3E%3Cpath fill='%23ffc400' d='M0 125h750v250H0z'/%3E%3C/svg%3E"); }
+#nav .links a.lang-fr::before, #navPanel .links a.lang-fr::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 600'%3E%3Cpath fill='%230055A4' d='M0 0h300v600H0z'/%3E%3Cpath fill='%23fff' d='M300 0h300v600H300z'/%3E%3Cpath fill='%23EF4135' d='M600 0h300v600H600z'/%3E%3C/svg%3E"); }
