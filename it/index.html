@@ -5,11 +5,11 @@
 	<title>Michele Orefice - Football Data Analyst</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/main.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
+		<link rel="stylesheet" href="/assets/css/noscript.css" />
 	</noscript>
 </head>
 
@@ -43,10 +43,10 @@
 				<li><a href="#skills">Competenze</a></li>
 				<li><a href="#contact">Contatti</a></li>
 				<li class="language-sep">|</li>
-				<li><a href="index.html" class="lang-en">EN</a></li>
-				<li><a href="index_it.html" class="lang-it">IT</a></li>
-				<li><a href="index_es.html" class="lang-es">ES</a></li>
-				<li><a href="index_fr.html" class="lang-fr">FR</a></li>
+				<li><a href="/" class="lang-en">EN</a></li>
+				<li><a href="/it/" class="lang-it">IT</a></li>
+				<li><a href="/es/" class="lang-es">ES</a></li>
+				<li><a href="/fr/" class="lang-fr">FR</a></li>
 			</ul>
 			<ul class="icons">
 				<li><a href="https://www.linkedin.com/in/micheleorefice/" class="icon brands fa-linkedin"><span
@@ -68,7 +68,7 @@
 				</header>
 				<div class="row">
 					<div class="col-4 col-12-small">
-						<span class="image fit"><img src="images/profile-new.jpg" alt="Michele Orefice" /></span>
+						<span class="image fit"><img src="/images/profile-new.jpg" alt="Michele Orefice" /></span>
 					</div>
 					<div class="col-8 col-12-small">
 						<p>Sono un Football Data Analyst con una solida base in <strong>Ingegneria Matematica</strong> e
@@ -104,7 +104,7 @@
 								di Analisi Tattica</a></h2>
 					</header>
 					<a href="https://github.com/morefice8/football-match-explorer" class="image main"><img
-							src="images/pass-network-liv.png" alt="Match Explorer Dashboard" /></a>
+							src="/images/pass-network-liv.png" alt="Match Explorer Dashboard" /></a>
 					<p>
 						Come progetto principale della mia tesi di Master presso la <strong>Escuela Universitaria Real
 							Madrid Universidad Europea</strong>, ho sviluppato <strong>Match Explorer</strong>, una web
@@ -137,7 +137,7 @@
 								e Palla con YOLOv8</a></h2>
 					</header>
 					<a href="https://github.com/morefice8/computer-vision-modelo-propio" class="image fit"><img
-							src="images/computer-vision.jpg" alt="Computer Vision Player Tracking Output" /></a>
+							src="/images/computer-vision.jpg" alt="Computer Vision Player Tracking Output" /></a>
 					<p>Questo progetto implementa una pipeline di computer vision per rilevare e tracciare giocatori,
 						arbitri e il pallone nei filmati delle partite. Ho allenato un modello <strong>YOLOv8</strong>
 						personalizzato su un dataset di Roboflow e ho utilizzato <strong>ByteTrack</strong> per un
@@ -157,7 +157,7 @@
 								Automatizzati con R</a></h2>
 					</header>
 					<a href="https://github.com/morefice8/daily-report-premier-league" class="image fit"><img
-							src="images/automated-reporting-r.jpg" alt="Automated Reporting Pipeline" /></a>
+							src="/images/automated-reporting-r.jpg" alt="Automated Reporting Pipeline" /></a>
 					<p>Una pipeline di dati end-to-end e automatizzata, costruita in <strong>R</strong>, che esegue lo
 						scraping giornaliero delle statistiche calcistiche da FBref tramite <em>rvest</em>, elabora i
 						dati con <em>dplyr</em> e genera report dinamici in HTML con <em>rmarkdown</em>. L'intero flusso
@@ -176,7 +176,7 @@
 								Gestione Infortuni</a></h2>
 					</header>
 					<a href="https://github.com/morefice8/ProjectLesiones/tree/main" class="image fit"><img
-							src="images/lesiones-db-erd.jpg" alt="ERD for the Football Injury Database" /></a>
+							src="/images/lesiones-db-erd.jpg" alt="ERD for the Football Injury Database" /></a>
 					<p>Questo progetto dimostra competenze fondamentali di ingegneria dei dati attraverso un database
 						relazionale costruito con <strong>SQL</strong>. Progettato da zero, gestisce i dati sugli
 						infortuni dei calciatori, inclusi trattamenti e specialisti coinvolti. Lo schema è normalizzato
@@ -196,7 +196,7 @@
 								COVID-19 con Tableau</a></h2>
 					</header>
 					<a href="https://public.tableau.com/views/CovidDashboard_17358320919220/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-						class="image fit"><img src="images/covid-dashboard.jpg"
+						class="image fit"><img src="/images/covid-dashboard.jpg"
 							alt="Tableau Dashboard for COVID-19 Analysis" /></a>
 					<p>Questo progetto illustra un flusso di lavoro completo di analisi dati. Ho elaborato e interrogato
 						un vasto dataset sul COVID-19 da <strong>Our World in Data</strong> usando <strong>SQL</strong>
@@ -316,31 +316,28 @@
 		<footer id="footer">
 			<section>
 				<form action="https://formsubmit.co/hello@micheleorefice.com" method="POST">
-					<form action="https://formsubmit.co/hello@micheleorefice.com" method="POST">
-						<!-- Impostazioni per FormSubmit -->
-						<input type="hidden" name="_next"
-							value="https://morefice8.github.io/my-portfolio/thank-you_it.html">
-						<!-- CAMBIA CON IL TUO DOMINIO FINALE -->
-						<input type="hidden" name="_captcha" value="false">
+					<!-- Redirect alla pagina di ringraziamento nella lingua corrente -->
+					<input type="hidden" name="_next" value="https://www.micheleorefice.com/it/thank-you.html">
+					<input type="hidden" name="_captcha" value="false">
 
-						<div class="fields">
-							<div class="field">
-								<label for="name">Nome</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field">
-								<label for="email">Email</label>
-								<input type="text" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Messaggio</label>
-								<textarea name="message" id="message" rows="3"></textarea>
-							</div>
+					<div class="fields">
+						<div class="field">
+							<label for="name">Nome</label>
+							<input type="text" name="name" id="name" />
 						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Invia Messaggio" /></li>
-						</ul>
-					</form>
+						<div class="field">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Messaggio</label>
+							<textarea name="message" id="message" rows="3"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Invia Messaggio" /></li>
+					</ul>
+				</form>
 			</section>
 			<section class="split contact">
 				<section class="alt">
@@ -365,15 +362,6 @@
 						<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
 					</ul>
 				</section>
-				<!-- <section>
-					<h3>Lingua</h3>
-					<ul class="actions">
-						<li><a href="index.html" class="button small">English</a></li>
-						<li><a href="index_it.html" class="button primary small">Italiano</a></li>
-						<li><a href="index_es.html" class="button small">Español</a></li>
-						<li><a href="index_fr.html" class="button small">Français</a></li>
-					</ul>
-				</section> -->
 			</section>
 		</footer>
 
@@ -388,13 +376,13 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/jquery.scrollex.min.js"></script>
+	<script src="/assets/js/jquery.scrolly.min.js"></script>
+	<script src="/assets/js/browser.min.js"></script>
+	<script src="/assets/js/breakpoints.min.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/main.js"></script>
 
 </body>
 
