@@ -6,6 +6,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -37,8 +39,8 @@
 					<a href="#about">Chi Sono</a>
 				</li>
 				<li><a href="#projects">Progetti</a></li>
+				<li><a href="#offer">Servizi</a></li>
 				<li><a href="#skills">Competenze</a></li>
-				<li><a href="#offer">Cosa Offro</a></li>
 				<li><a href="#contact">Contatti</a></li>
 				<li class="language-sep">|</li>
 				<li><a href="index.html" class="lang-en">EN</a></li>
@@ -208,75 +210,94 @@
 				</article>
 			</section>
 
-			<!-- Skills -->
-			<section id="skills">
+			<!-- What I Offer -->
+			<section id="offer" class="tiles">
 				<header class="major">
-					<h2>Competenze</h2>
+					<h2>Servizi</h2>
+					<p>Trasformo dati calcistici complessi in insight utili e strumenti intelligenti per club, agenzie e
+						media.</p>
 				</header>
-				<div class="row">
-					<div class="col-4 col-12-small">
-						<h4>Stack Tecnico</h4>
-						<ul>
-							<li><strong>Linguaggi:</strong> Python, R, SQL</li>
-							<li><strong>Data Science & ML:</strong> Pandas, NumPy, Scikit-Learn, Ultralytics (YOLOv8)
-							</li>
-							<li><strong>ETL & Automazione:</strong> R (<em>rvest</em>, <em>dplyr</em>), Task Pianificati
-							</li>
-							<li><strong>Controllo Versione:</strong> Git & GitHub</li>
-						</ul>
+
+				<div class="tiles-container">
+					<div class="tile" style="animation-delay: 0.1s">
+						<i class="fas fa-network-wired fa-3x"></i>
+						<h3>Dashboard Tattiche Personalizzate</h3>
+						<div class="tile-text">
+							Piattaforme interattive come il mio Match Explorer per analizzare costruzioni, transizioni e
+							palle inattive.
+						</div>
 					</div>
-					<div class="col-4 col-12-small">
-						<h4>Visualizzazione Dati</h4>
-						<ul>
-							<li><strong>Sviluppo Dashboard:</strong> Dash, Tableau, Power BI</li>
-							<li><strong>Librerie Python:</strong> Plotly, Matplotlib, Seaborn</li>
-							<li><strong>Reportistica:</strong> R Markdown</li>
-							<li><strong>Computer Vision:</strong> Supervision, OpenCV</li>
-						</ul>
+
+					<div class="tile" style="animation-delay: 0.1s">
+						<i class="fas fa-user-secret fa-3x"></i>
+						<h3>Scouting & Analisi Avversari</h3>
+						<div class="tile-text">Pre- e post-partita supportati dai dati, con visualizzazioni chiare a
+							sostegno della preparazione tattica.</div>
 					</div>
-					<div class="col-4 col-12-small">
-						<h4>Analisi Calcistica</h4>
-						<ul>
-							<li><strong>Analisi Tattica:</strong> Costruzione dal basso, Transizioni, Palle Inattive
-							</li>
-							<li><strong>Metriche di Performance:</strong> Reti di Passaggi, PPDA, Ingressi ultimo terzo
-							</li>
-							<li><strong>Data Storytelling:</strong> Creare narrazioni chiare da dati complessi</li>
-							<li><strong>Progettazione Database:</strong> Schemi relazionali per dati sportivi</li>
-						</ul>
+
+					<div class="tile" style="animation-delay: 0.1s">
+						<i class="fas fa-cogs fa-3x"></i>
+						<h3>Pipeline & Automazione Dati</h3>
+						<div class="tile-text">Dallo scraping alla reportistica programmata: flussi automatizzati per
+							aggiornamenti tempestivi.</div>
 					</div>
 				</div>
 			</section>
 
-			<!-- What I Offer -->
-			<section id="offer">
+			<!-- Skills -->
+			<section id="skills" class="tiles">
 				<header class="major">
-					<h2>Cosa Offro</h2>
+					<h2>Competenze</h2>
 				</header>
-				<p>Trasformo dati complessi in un vantaggio competitivo. Ecco i principali servizi che offro a club,
-					agenzie e media:</p>
-				<ul>
-					<li>
-						<strong>Dashboard Tattiche Personalizzate:</strong> Sviluppo di piattaforme interattive, come il
-						mio <strong>Match Explorer</strong>, per analizzare le fasi di gioco (costruzione, transizioni,
-						palle inattive) e scoprire i pattern degli avversari.
-					</li>
-					<!-- <li>
-						<strong>Analisi Video Automatizzata:</strong> Utilizzo di modelli di Computer Vision
-						(<strong>YOLOv8</strong>) per estrarre dati di tracciamento da filmati di partite, abilitando
-						analisi spaziali avanzate.
-					</li> -->
-					<li>
-						<strong>Scouting e Reportistica Data-Driven:</strong> Creazione di report pre e post-partita
-						dettagliati per identificare i punti di forza e di debolezza degli avversari, supportati da
-						visualizzazioni chiare (<strong>SQL</strong>, <strong>Tableau</strong>, <strong>R</strong>).
-					</li>
-					<li>
-						<strong>Pipeline Dati e Automazione:</strong> Progettazione e implementazione di flussi di
-						lavoro automatizzati per la raccolta (web scraping), pulizia e reportistica giornaliera dei
-						dati, garantendo insight sempre aggiornati.
-					</li>
-				</ul>
+				<div class="tiles-container">
+					<div class="tile" style="animation-delay: 0.1s">
+						<i class="fas fa-code fa-3x"></i>
+						<h3>Stack Tecnologico</h3>
+						<div class="tile-text icons-list colorful-icons">
+							<div><i class="fab fa-python fa-2x" style="color:#3776AB;"></i><span>Python</span></div>
+							<div><i class="fab fa-r-project fa-2x" style="color:#276DC3;"></i><span>R</span></div>
+							<div><i class="fas fa-database fa-2x" style="color:#f4a261;"></i><span>SQL</span></div>
+							<div><i class="fas fa-robot fa-2x" style="color:#9b5de5;"></i><span>ML</span></div>
+							<div><i class="fas fa-project-diagram fa-2x" style="color:#43aa8b;"></i><span>ETL</span>
+							</div>
+							<div><i class="fab fa-git-alt fa-2x" style="color:#f1502f;"></i><span>Git</span></div>
+						</div>
+					</div>
+					<div class="tile" style="animation-delay: 0.3s">
+						<i class="fas fa-chart-bar fa-3x"></i>
+						<h3>Visualizzazione Dati</h3>
+						<div class="tile-text icons-list colorful-icons">
+							<div><i class="fas fa-table fa-2x" style="color:#e9c46a;"></i><span>Tableau</span></div>
+							<div><i class="fas fa-chart-area fa-2x" style="color:#4cc9f0;"></i><span>Power BI</span>
+							</div>
+							<div><i class="fas fa-chart-pie fa-2x" style="color:#e76f51;"></i><span>Dashboards</span>
+							</div>
+							<div><i class="fas fa-project-diagram fa-2x" style="color:#2a9d8f;"></i><span>Plotly</span>
+							</div>
+							<div><i class="fas fa-file-alt fa-2x" style="color:#264653;"></i><span>Reportistica</span>
+							</div>
+							<div><i class="fas fa-eye fa-2x" style="color:#e63946;"></i><span>Computer Vision</span>
+							</div>
+						</div>
+					</div>
+					<div class="tile" style="animation-delay: 0.5s">
+						<i class="fas fa-futbol fa-3x"></i>
+						<h3>Football Analytics</h3>
+						<div class="tile-text icons-list colorful-icons">
+							<div><i class="fas fa-chalkboard-teacher fa-2x"
+									style="color:#06d6a0;"></i><span>Tattica</span></div>
+							<div><i class="fas fa-running fa-2x" style="color:#f77f00;"></i><span>Transizioni</span>
+							</div>
+							<div><i class="fas fa-bullseye fa-2x" style="color:#7209b7;"></i><span>Palle Inattive</span>
+							</div>
+							<div><i class="fas fa-chart-line fa-2x" style="color:#118ab2;"></i><span>Metriche</span>
+							</div>
+							<div><i class="fas fa-pen-fancy fa-2x" style="color:#f72585;"></i><span>Storytelling</span>
+							</div>
+							<div><i class="fas fa-database fa-2x" style="color:#f4a261;"></i><span>Database</span></div>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<!-- Call To Action -->
@@ -297,7 +318,8 @@
 				<form action="https://formsubmit.co/hello@micheleorefice.com" method="POST">
 					<form action="https://formsubmit.co/hello@micheleorefice.com" method="POST">
 						<!-- Impostazioni per FormSubmit -->
-						<input type="hidden" name="_next" value="https://morefice8.github.io/my-portfolio/thank-you_it.html">
+						<input type="hidden" name="_next"
+							value="https://morefice8.github.io/my-portfolio/thank-you_it.html">
 						<!-- CAMBIA CON IL TUO DOMINIO FINALE -->
 						<input type="hidden" name="_captcha" value="false">
 
