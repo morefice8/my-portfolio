@@ -1,8 +1,43 @@
 /* Weekly match analysis articles — add after main.css */
 
+/* Article layout
+   HTML5 UP's #main > * rule has higher specificity than .analysis-shell and
+   was forcing margin: 0, leaving the article visually stuck to the left.
+   We reset that direct-child layout here and centre each editorial block. */
+#main > .analysis-shell {
+  width: 100%;
+  max-width: none;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 .analysis-shell {
-  max-width: 58rem;
-  margin: 0 auto;
+  width: 100%;
+}
+
+/* Comfortable reading width for text, with wider room for data visuals. */
+.analysis-hero,
+.analysis-article > p,
+.analysis-article > h2,
+.analysis-article > h3,
+.analysis-article > ul,
+.analysis-article > .analysis-note,
+.analysis-article > .analysis-callout,
+.analysis-article > .analysis-method,
+.analysis-article > .analysis-xi,
+.analysis-article > .analysis-stat-grid,
+.analysis-article > .analysis-watchlist,
+.analysis-article > .analysis-source,
+.analysis-article > .analysis-back {
+  width: min(60rem, calc(100% - 6rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.analysis-figure {
+  width: min(68rem, calc(100% - 4rem));
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .analysis-hero {
@@ -29,18 +64,20 @@
 }
 
 .analysis-deck {
-  max-width: 48rem;
-  margin: 0 0 1.5rem 0;
+  max-width: 52rem;
+  margin: 0 auto 1.5rem auto;
   color: #596575;
   font-size: 1.15rem;
   line-height: 1.7;
+  text-align: left;
 }
 
 .analysis-meta {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.55rem 1.1rem;
-  margin: 0;
+  margin: 0 auto;
   color: #788391;
   font-size: 0.82rem;
 }
@@ -54,7 +91,8 @@
 .analysis-note,
 .analysis-callout,
 .analysis-method {
-  margin: 2rem 0;
+  margin-block: 2rem;
+  margin-inline: auto;
   padding: 1.4rem 1.5rem;
   border: 1px solid #d8e6ec;
   border-left: 4px solid #1596b6;
@@ -72,7 +110,8 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.9rem;
-  margin: 2rem 0 2.5rem 0;
+  margin-block: 2rem 2.5rem;
+  margin-inline: auto;
 }
 
 .analysis-stat {
@@ -101,7 +140,8 @@
 }
 
 .analysis-article h2 {
-  margin: 3.5rem 0 1rem 0;
+  margin-block: 3.5rem 1rem;
+  margin-inline: auto;
   font-size: 1.75rem;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -122,7 +162,8 @@
 }
 
 .analysis-figure {
-  margin: 2.2rem 0 2.7rem 0;
+  margin-block: 2.2rem 2.7rem;
+  margin-inline: auto;
 }
 
 .analysis-figure img {
@@ -146,7 +187,8 @@
   grid-template-columns: 1fr auto;
   gap: 1rem;
   align-items: start;
-  margin: 1.8rem 0;
+  margin-block: 1.8rem;
+  margin-inline: auto;
   padding: 1.3rem 1.4rem;
   border-radius: 0.5rem;
   background: #132f49;
@@ -177,7 +219,8 @@
 .analysis-watchlist {
   counter-reset: watch;
   list-style: none;
-  margin: 1.75rem 0 0 0;
+  margin-block: 1.75rem 0;
+  margin-inline: auto;
   padding: 0;
 }
 
@@ -220,7 +263,8 @@
 }
 
 .analysis-back {
-  margin: 0 0 2rem 0;
+  margin-block: 0 2rem;
+  margin-inline: auto;
 }
 
 /* Home/listing cards */
@@ -390,5 +434,230 @@
 
   .lab8-watermark span {
     display: none;
+  }
+}
+
+
+/* Desktop navigation: the Italian page now has one extra section, so the
+   stock Massively spacing can push the social icons outside the nav. */
+@media screen and (min-width: 981px) {
+  #nav ul.links {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  #nav ul.links li a {
+    padding-left: 1.05rem;
+    padding-right: 1.05rem;
+  }
+
+  #nav ul.links li.language-sep {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+  }
+
+  #nav ul.links li a.lang-en,
+  #nav ul.links li a.lang-it,
+  #nav ul.links li a.lang-es,
+  #nav ul.links li a.lang-fr {
+    padding-left: 0.55rem;
+    padding-right: 0.55rem;
+  }
+
+  #nav ul.icons {
+    flex: 0 0 auto;
+    margin-left: auto;
+    padding-right: 0.85rem;
+  }
+
+  #nav ul.icons li {
+    padding-left: 0.45rem;
+    padding-right: 0.45rem;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 981px) {
+  #nav ul.links li a {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  #nav ul.links li a.lang-en,
+  #nav ul.links li a.lang-it,
+  #nav ul.links li a.lang-es,
+  #nav ul.links li a.lang-fr {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+  }
+
+  #nav ul.icons li {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .analysis-hero,
+  .analysis-article > p,
+  .analysis-article > h2,
+  .analysis-article > h3,
+  .analysis-article > ul,
+  .analysis-article > .analysis-note,
+  .analysis-article > .analysis-callout,
+  .analysis-article > .analysis-method,
+  .analysis-article > .analysis-xi,
+  .analysis-article > .analysis-stat-grid,
+  .analysis-article > .analysis-watchlist,
+  .analysis-article > .analysis-source,
+  .analysis-article > .analysis-back,
+  .analysis-figure {
+    width: calc(100% - 2rem);
+  }
+}
+
+
+/* Editorial alignment override — keep every article block on the same grid */
+.analysis-article > h2,
+.analysis-article > h3,
+.analysis-article > p,
+.analysis-article > ul,
+.analysis-article > .analysis-note,
+.analysis-article > .analysis-callout,
+.analysis-article > .analysis-method,
+.analysis-article > .analysis-xi,
+.analysis-article > .analysis-stat-grid,
+.analysis-article > .analysis-watchlist,
+.analysis-article > .analysis-source,
+.analysis-article > .analysis-back {
+  margin-inline: auto;
+}
+
+.analysis-article > h2 {
+  text-align: left;
+}
+
+.analysis-figure {
+  margin-inline: auto;
+}
+
+/* Article end matter: compact source note + aligned actions */
+.analysis-endmatter {
+  width: min(60rem, calc(100% - 6rem));
+  margin: 3.75rem auto 0;
+  padding: 1.75rem 0 2.5rem;
+  border-top: 1px solid #e0e5e9;
+}
+
+.analysis-endmatter .analysis-source {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #5e6873;
+}
+
+.analysis-source-label {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: #17334b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.analysis-endmatter .analysis-source p {
+  margin: 0;
+  color: #5e6873;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.analysis-endmatter .analysis-source .analysis-source-note {
+  margin-top: 0.55rem;
+  color: #7a8490;
+  font-size: 0.8rem;
+}
+
+.analysis-endmatter .analysis-back {
+  width: 100%;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.analysis-endmatter .analysis-back li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Keep article and footer visually connected on analysis pages. */
+.analysis-page #main {
+  margin-bottom: 0 !important;
+}
+
+.analysis-page #footer.analysis-site-footer {
+  display: block;
+  margin-top: 0 !important;
+  padding: 0;
+}
+
+.analysis-page #footer .analysis-footer-inner {
+  width: min(60rem, calc(100% - 6rem));
+  margin: 0 auto;
+  padding: 2rem 0;
+  border: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.analysis-footer-id {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.analysis-footer-id strong {
+  color: #17334b;
+  font-size: 0.92rem;
+}
+
+.analysis-footer-id span {
+  color: #7b8590;
+  font-size: 0.76rem;
+}
+
+.analysis-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+}
+
+.analysis-footer-links a {
+  border-bottom: 0;
+  color: #53616f;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.analysis-footer-links a:hover {
+  color: #1596b6;
+}
+
+@media screen and (max-width: 736px) {
+  .analysis-endmatter,
+  .analysis-page #footer .analysis-footer-inner {
+    width: calc(100% - 2rem);
+  }
+
+  .analysis-page #footer .analysis-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
