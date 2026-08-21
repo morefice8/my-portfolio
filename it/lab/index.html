@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="it">
+<head>
+  <title>Il Lab dell'8 | Analisi e Football Intelligence</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#10354D" />
+	<meta name="application-name" content="Michele Orefice" />
+	<meta name="apple-mobile-web-app-title" content="Michele Orefice" />
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	<link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<meta name="description" content="Il Lab dell'8: analisi pre-match, scouting dell'avversario e football intelligence attraverso event data, visualizzazioni e interpretazione tattica." />
+<meta name="author" content="Michele Orefice" />
+<link rel="canonical" href="https://www.micheleorefice.com/it/lab/" />
+<link rel="alternate" hreflang="en" href="https://www.micheleorefice.com/lab/" />
+<link rel="alternate" hreflang="it" href="https://www.micheleorefice.com/it/lab/" />
+<link rel="alternate" hreflang="es" href="https://www.micheleorefice.com/es/lab/" />
+<link rel="alternate" hreflang="fr" href="https://www.micheleorefice.com/fr/lab/" />
+<link rel="alternate" hreflang="x-default" href="https://www.micheleorefice.com/lab/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Il Lab dell'8" />
+<meta property="og:title" content="Il Lab dell'8" />
+<meta property="og:description" content="Il Lab dell'8: analisi pre-match, scouting dell'avversario e football intelligence attraverso event data, visualizzazioni e interpretazione tattica." />
+<meta property="og:url" content="https://www.micheleorefice.com/it/lab/" />
+<meta property="og:image" content="https://www.micheleorefice.com/images/og/genoa-napoli-buildup-analysis.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Buildup analysis from Il Lab dell’8" />
+<meta property="og:locale" content="it_IT" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Il Lab dell'8" />
+<meta name="twitter:description" content="Il Lab dell'8: analisi pre-match, scouting dell'avversario e football intelligence attraverso event data, visualizzazioni e interpretazione tattica." />
+<meta name="twitter:image" content="https://www.micheleorefice.com/images/og/genoa-napoli-buildup-analysis.jpg" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/brand.css" />
+  <link rel="stylesheet" href="/assets/css/analysis.css?v=2a5" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload brand-inner-page lab-index-page">
+<div id="wrapper">
+  <!-- Brand Header -->
+  <header id="header" class="brand-site-header">
+    <a href="/it/" class="logo brand-signature" aria-label="Michele Orefice - Home">
+      <span class="brand-signature__monogram">MO<span class="brand-signature__dot">.</span></span>
+      <span class="brand-signature__name">Michele Orefice</span>
+    </a>
+  </header>
+
+  <!-- Brand Navigation -->
+  <nav id="nav" class="brand-nav" aria-label="Navigazione principale">
+    <ul class="links brand-nav__links">
+      <li><a href="/it/#projects">Work</a></li>
+      <li class="active"><a href="/it/lab/">Lab</a></li>
+      <li><a href="/it/#about">About</a></li>
+      <li><a href="/it/#contact">Contact</a></li>
+    </ul>
+    <div class="brand-nav__tools">
+      <details class="brand-language">
+        <summary aria-label="Cambia lingua">IT<span class="brand-language__chevron" aria-hidden="true"></span></summary>
+        <div class="brand-language__menu">
+          <a href="/lab/">EN</a>
+          <a href="/it/" aria-current="page">IT</a>
+          <a href="/es/lab/">ES</a>
+          <a href="/fr/lab/">FR</a>
+        </div>
+      </details>
+      <ul class="icons brand-nav__social" aria-label="Social links">
+        <li><a href="https://www.linkedin.com/in/micheleorefice/" class="icon brands fa-linkedin" aria-label="LinkedIn"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/morefice8" class="icon brands fa-github" aria-label="GitHub"><span class="label">GitHub</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+    <!-- Lab Hero -->
+    <section class="lab-index-hero" aria-labelledby="lab-index-title">
+      <div class="lab-index-hero__inner">
+        <div class="lab-index-hero__copy">
+          <div class="lab-index-lockup">
+            <img src="/images/lab/lab8-mark.webp" alt="Il Lab dell'8" width="96" height="96" />
+            <div><strong>Il Lab dell'8</strong><span>Football intelligence</span></div>
+          </div>
+          <p class="lab-index-eyebrow">Analisi · Dati · Tattica</p>
+          <h1 id="lab-index-title">Il calcio, spiegato attraverso <span>dati e immagini.</span></h1>
+          <p class="lab-index-deck">Uno spazio editoriale per trasformare event data, metriche e pattern di gioco in domande tattiche leggibili. Pre-match, opponent scouting e analisi visuale senza perdere di vista la partita.</p>
+          <div class="lab-index-topics" aria-label="Temi del Lab">
+            <span>Pre-match</span><span>Opponent scouting</span><span>Match data</span><span>Visual storytelling</span>
+          </div>
+        </div>
+        <div class="lab-index-hero__mark" aria-hidden="true">
+          <span>8</span>
+          <small>DATA → QUESTION → EVIDENCE</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Analysis -->
+    <section class="lab-index-latest" aria-labelledby="latest-analysis-title">
+      <div class="lab-index-section-head">
+        <p class="lab-index-section-eyebrow">Latest analysis <span>01</span></p>
+        <div>
+          <h2 id="latest-analysis-title">Un avversario, tre domande chiave.</h2>
+          <p>La prima analisi del Lab parte dal Genoa: come pressa, come costruisce e dove può lasciare spazio al Napoli.</p>
+        </div>
+      </div>
+
+      <article class="lab-index-featured">
+        <a class="lab-index-featured__visual" href="/it/lab/genoa-napoli-2026-pre-match.html" aria-label="Leggi l'analisi Genoa-Napoli">
+          <div class="lab-index-featured__frame">
+            <span class="lab-index-featured__label">Buildup analysis · Match Explorer</span>
+            <img src="/images/lab/genoa-napoli-buildup-cover.webp" alt="Buildup analysis in Match Explorer" width="1558" height="809" loading="lazy" decoding="async" />
+          </div>
+        </a>
+
+        <div class="lab-index-featured__content">
+          <p class="lab-index-featured__kicker">Pre-match · Serie A · 20 agosto 2026</p>
+          <h3>Genoa–Napoli: scouting dell'avversario attraverso i dati.</h3>
+          <p>Pressing, costruzione, progressione e transizioni: una lettura del Genoa 2025/26 per capire quali dinamiche possono orientare la preparazione della gara.</p>
+
+          <div class="lab-index-featured__metrics" aria-label="Tre dati chiave dell'analisi">
+            <div><strong>11,32</strong><span>PPDA nell'ultimo confronto</span></div>
+            <div><strong>81%</strong><span>build-up con gioco lungo precoce</span></div>
+            <div><strong>43%</strong><span>transizioni nell'ultimo terzo</span></div>
+          </div>
+
+          <a href="/it/lab/genoa-napoli-2026-pre-match.html" class="button lab-index-featured__cta">Leggi l'analisi <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Editorial Method -->
+    <section class="lab-index-method" aria-labelledby="lab-method-title">
+      <header class="lab-index-method__header">
+        <p class="lab-index-section-eyebrow">Il metodo <span>02</span></p>
+        <h2 id="lab-method-title">Non partire dal grafico. Parti dalla domanda.</h2>
+      </header>
+      <div class="lab-index-method__grid">
+        <article>
+          <span>01</span>
+          <h3>Domanda</h3>
+          <p>Quale comportamento vogliamo capire e perché può contare nella partita?</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Evidenza</h3>
+          <p>Selezioniamo metriche e visualizzazioni che aggiungono davvero informazione, senza mostrare dati per il gusto di mostrarli.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Storia</h3>
+          <p>Colleghiamo i pattern alla lettura tattica, distinguendo ciò che i dati mostrano da ciò che suggeriscono.</p>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <footer class="brand-footer lab-index-footer">
+    <div class="brand-footer__inner">
+      <div class="brand-footer__signature">Michele Orefice</div>
+      <p>Football Data Analyst · Madrid</p>
+      <nav class="brand-footer__links" aria-label="Link social">
+        <a href="https://www.linkedin.com/in/micheleorefice/">LinkedIn</a>
+        <a href="https://github.com/morefice8">GitHub</a>
+        <a href="https://www.youtube.com/@illabdell8">YouTube</a>
+      </nav>
+    </div>
+    <div class="brand-footer__legal"><span>© 2026 Michele Orefice</span></div>
+  </footer>
+</div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.scrollex.min.js"></script>
+<script src="/assets/js/jquery.scrolly.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

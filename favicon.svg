@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Michele Orefice">
+  <rect width="64" height="64" rx="12" fill="#10354D"/>
+  <path d="M14 46V18L32 36L50 18V46" fill="none" stroke="#F5F4EF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="57" cy="46" r="3.5" fill="#F1785B"/>
+</svg>

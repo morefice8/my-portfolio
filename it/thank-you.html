@@ -1,50 +1,44 @@
 <!DOCTYPE HTML>
 <html lang="it">
 <head>
-    <title>Grazie!</title>
+    <title>Messaggio inviato | Michele Orefice</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#10354D" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/brand.css" />
     <!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VBEQS69YCW"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-VBEQS69YCW');
-	</script>
-    <style>
-        /*
-            Forza la visualizzazione del pulsante di ritorno
-            anche sulla versione mobile della pagina di ringraziamento.
-        */
-        @media screen and (max-width: 736px) {
-            #intro .actions {
-                display: block !important;
-            }
-        }
-    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VBEQS69YCW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VBEQS69YCW');
+    </script>
 </head>
-<body class="is-preload">
-    <div id="wrapper" class="fade-in">
-        <div id="intro">
-            <h1>Grazie!</h1>
-            <p>Il tuo messaggio è stato inviato con successo. Ti risponderò il prima possibile.</p>
-            <ul class="actions">
-                <li><a href="/it/" class="button icon solid solo fa-arrow-left">Torna al Portfolio</a></li>
-            </ul>
-        </div>
-    </div>
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/jquery.scrollex.min.js"></script>
-    <script src="/assets/js/jquery.scrolly.min.js"></script>
-    <script src="/assets/js/browser.min.js"></script>
-    <script src="/assets/js/breakpoints.min.js"></script>
-    <script src="/assets/js/util.js"></script>
-    <script src="/assets/js/main.js"></script>
+<body class="brand-thankyou-page">
+    <main class="brand-thankyou" aria-labelledby="thankyou-title">
+        <a class="brand-thankyou__signature" href="/it/" aria-label="Michele Orefice">
+            <span class="brand-thankyou__mark">MO<span>.</span></span>
+            <span>Michele Orefice</span>
+        </a>
+
+        <section class="brand-thankyou__card">
+            <div class="brand-thankyou__status" aria-hidden="true">✓</div>
+            <p class="brand-thankyou__eyebrow">MESSAGGIO RICEVUTO</p>
+            <h1 id="thankyou-title">Grazie.</h1>
+            <p class="brand-thankyou__copy">Il tuo messaggio è stato inviato. Ti risponderò il prima possibile.</p>
+            <a class="button brand-primary brand-thankyou__button" href="/it/">Torna al portfolio <span aria-hidden="true">→</span></a>
+        </section>
+
+        <p class="brand-thankyou__footer">Football Data Analyst · Madrid</p>
+    </main>
 </body>
 </html>

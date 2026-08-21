@@ -301,7 +301,7 @@ select:focus-visible {
    ============================================================ */
 
 :root {
-  --site-header-height: 4.3rem;
+  --site-header-height: 4.75rem;
   --site-header-bg: rgba(9, 31, 45, 0.9);
   --site-header-line: rgba(174, 228, 238, 0.16);
 }
@@ -594,7 +594,7 @@ body.brand-inner-page #main {
    ------------------------------------------------------------ */
 @media screen and (max-width: 980px) {
   :root {
-    --site-header-height: 4.15rem;
+    --site-header-height: 4.4rem;
   }
 
   #header.brand-site-header {
@@ -4064,5 +4064,311 @@ body {
 
   .brand-footer__links {
     gap: 0.8rem;
+  }
+}
+
+/* ============================================================
+   PHASE 2B.3 / 2B.4a — Header vertical breathing room
+   The rail is slightly taller and every visible control is shifted
+   together. The intro-coupled selectors are repeated intentionally
+   so Massively cannot reset the personal signature on the homepage.
+   ============================================================ */
+#header.brand-site-header .brand-signature,
+#intro + #header.brand-site-header .brand-signature,
+#intro.hidden + #header.brand-site-header .brand-signature,
+#nav.brand-nav .brand-nav__links,
+#nav.brand-nav .brand-nav__tools {
+  transform: translateY(0.28rem);
+}
+
+@media screen and (max-width: 980px) {
+  #header.brand-site-header .brand-signature,
+  #intro + #header.brand-site-header .brand-signature,
+  #intro.hidden + #header.brand-site-header .brand-signature {
+    transform: translateY(0.18rem);
+  }
+}
+
+/* ============================================================
+   PHASE 2B.4 — UTILITY PAGES
+   Branded, no-index confirmation screen for contact submissions.
+   ============================================================ */
+
+body.brand-thankyou-page {
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(68, 185, 209, 0.14), transparent 26rem),
+    linear-gradient(145deg, #071f2d 0%, var(--brand-ink) 52%, #0d4055 100%);
+  color: #fff;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.brand-thankyou {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  width: min(100%, 90rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.brand-thankyou::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(174, 228, 238, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(174, 228, 238, 0.14) 1px, transparent 1px);
+  background-size: 6rem 6rem;
+}
+
+.brand-thankyou__signature {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: min(100%, 50rem);
+  justify-self: center;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.brand-thankyou__mark {
+  display: grid;
+  place-items: center;
+  width: 2.7rem;
+  height: 2.55rem;
+  border: 1px solid rgba(174, 228, 238, 0.18);
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: -0.075em;
+}
+
+.brand-thankyou__mark span {
+  color: var(--brand-coral);
+}
+
+.brand-thankyou__card {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  width: min(100%, 50rem);
+  justify-self: center;
+  margin: clamp(3rem, 8vh, 6rem) auto;
+  padding: clamp(2rem, 5vw, 4rem);
+  border: 1px solid rgba(174, 228, 238, 0.15);
+  border-radius: clamp(1.4rem, 3vw, 2.2rem);
+  background: rgba(7, 31, 45, 0.78);
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.22);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+
+.brand-thankyou__status {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 2rem;
+  border-radius: 999px;
+  background: var(--brand-cyan);
+  color: var(--brand-ink);
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.brand-thankyou__eyebrow {
+  margin: 0 0 1rem;
+  color: var(--brand-cyan-soft);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.brand-thankyou__card h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(3.4rem, 8vw, 6.4rem);
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  line-height: 0.92;
+}
+
+.brand-thankyou__copy {
+  max-width: 34rem;
+  margin: 1.6rem 0 2rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.brand-thankyou__button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  width: fit-content;
+  min-height: 3.2rem;
+  margin: 0;
+  padding: 0.82rem 1.35rem !important;
+  border: 1px solid var(--brand-cyan) !important;
+  border-radius: 999px !important;
+  background: var(--brand-cyan) !important;
+  color: var(--brand-ink) !important;
+  box-shadow: none !important;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.075em;
+  line-height: 1;
+  text-decoration: none !important;
+  text-transform: uppercase;
+}
+
+.brand-thankyou__button:hover {
+  border-color: #65c4d8 !important;
+  background: #65c4d8 !important;
+  color: var(--brand-ink) !important;
+  text-decoration: none !important;
+  transform: translateY(-2px);
+}
+
+.brand-thankyou__footer {
+  position: relative;
+  z-index: 1;
+  align-self: end;
+  justify-self: center;
+  width: min(100%, 50rem);
+  margin: 0;
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 736px) {
+  .brand-thankyou {
+    padding: 1.25rem;
+  }
+
+  .brand-thankyou__signature {
+    font-size: 0.7rem;
+  }
+
+  .brand-thankyou__card {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+  }
+
+  .brand-thankyou__status {
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: 1.4rem;
+    font-size: 1.2rem;
+  }
+
+  .brand-thankyou__card h1 {
+    font-size: clamp(3rem, 17vw, 4.5rem);
+  }
+
+  .brand-thankyou__copy {
+    margin: 1.25rem 0 1.6rem;
+  }
+}
+
+/* ============================================================
+   PHASE 2B.4b — GLOBAL LAYOUT CONSISTENCY
+   Final compacting/alignment pass for the fixed header and utility page.
+   ============================================================ */
+
+/* A little more air above the personal signature while keeping the
+   entire navigation rail optically aligned. */
+#header.brand-site-header .brand-signature,
+#intro + #header.brand-site-header .brand-signature,
+#intro.hidden + #header.brand-site-header .brand-signature,
+#nav.brand-nav .brand-nav__links,
+#nav.brand-nav .brand-nav__tools {
+  transform: translateY(0.42rem);
+}
+
+/* The utility mark is text, not two independent grid items. Keeping MO.
+   on one baseline prevents the coral full stop from dropping to the edge. */
+.brand-thankyou__mark {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  line-height: 1;
+}
+
+.brand-thankyou__mark > span {
+  display: inline;
+  position: static;
+  margin-left: 0.015em;
+  line-height: 1;
+}
+
+/* A confirmation page should fit comfortably in a normal desktop viewport. */
+.brand-thankyou {
+  min-height: 100svh;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  padding-top: clamp(1rem, 2.2vh, 1.6rem);
+  padding-bottom: clamp(1rem, 2.2vh, 1.6rem);
+}
+
+.brand-thankyou__card {
+  margin: clamp(1.25rem, 3vh, 2.25rem) auto;
+  padding: clamp(1.75rem, 3.2vw, 2.75rem);
+}
+
+.brand-thankyou__status {
+  width: 2.85rem;
+  height: 2.85rem;
+  margin-bottom: 1.35rem;
+  font-size: 1.25rem;
+}
+
+.brand-thankyou__eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.brand-thankyou__card h1 {
+  font-size: clamp(3rem, 6.2vw, 5.25rem);
+}
+
+.brand-thankyou__copy {
+  margin: 1.25rem 0 1.55rem;
+}
+
+@media screen and (max-width: 980px) {
+  #header.brand-site-header .brand-signature,
+  #intro + #header.brand-site-header .brand-signature,
+  #intro.hidden + #header.brand-site-header .brand-signature {
+    transform: translateY(0.28rem);
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .brand-thankyou {
+    min-height: 100svh;
+    padding: 1rem;
+  }
+
+  .brand-thankyou__card {
+    margin: 1.5rem 0;
+    padding: 1.4rem;
   }
 }

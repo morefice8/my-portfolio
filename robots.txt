@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Utility pages are not search landing pages.
+Disallow: /thank-you.html
+Disallow: /it/thank-you.html
+Disallow: /es/thank-you.html
+Disallow: /fr/thank-you.html
+
+Sitemap: https://www.micheleorefice.com/sitemap.xml
