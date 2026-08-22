@@ -4320,7 +4320,7 @@ body.brand-thankyou-page {
    on one baseline prevents the coral full stop from dropping to the edge. */
 .brand-thankyou__mark {
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   line-height: 1;
 }

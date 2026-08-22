@@ -1,10 +1,6 @@
 User-agent: *
 Allow: /
 
-# Utility pages are not search landing pages.
-Disallow: /thank-you.html
-Disallow: /it/thank-you.html
-Disallow: /es/thank-you.html
-Disallow: /fr/thank-you.html
+# Thank-you pages carry meta noindex,nofollow; keep them crawlable so crawlers can see the directive.
 
-Sitemap: https://www.micheleorefice.com/sitemap.xml
+Sitemap: https://micheleorefice.com/sitemap.xml
