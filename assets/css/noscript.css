@@ -1,34 +1,10 @@
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+/* Michele Orefice — no-JavaScript fallback */
+body.is-preload #intro.brand-hero {
+  opacity: 1;
+  transform: none;
+}
 
-/* Wrapper */
-
-	#wrapper {
-		background-color: #212931;
-		background-image: url("../../images/overlay.png"), linear-gradient(135deg, #10354d 0%, #082b3d 100%);
-		background-size: auto, cover;
-		background-position: center,								center,														top center;
-		background-repeat: repeat,								no-repeat,													no-repeat;
-		background-attachment: fixed, fixed;
-	}
-
-		#wrapper.fade-in:before {
-			display: none;
-		}
-
-/* Intro */
-
-	body.is-preload #intro {
-		opacity: 1;
-	}
-
-		body.is-preload #intro:not(.hidden) + #header + #nav {
-			-moz-transform: none;
-			-webkit-transform: none;
-			-ms-transform: none;
-			transform: none;
-			opacity: 1;
-		}
+body.is-preload #intro:not(.hidden) + #header.brand-site-header + #nav.brand-nav {
+  opacity: 1;
+  transform: none;
+}

@@ -1,10 +1,9 @@
 /*
  * Michele Orefice — Brand System
  * ------------------------------------------------------------
- * Global visual tokens and foundations.
- * Loaded after main.css so the portfolio can progressively move
- * away from the original Massively theme without rewriting it all
- * at once.
+ * Global visual tokens and visual foundations.
+ * Loaded after base.css, which now provides only the small structural
+ * reset and primitives shared by the portfolio and editorial pages.
  */
 
 :root {
@@ -296,8 +295,7 @@ select:focus-visible {
 
 /* ============================================================
    STEP 02 — Site header & primary navigation
-   A fixed editorial navigation layer that replaces Massively's
-   large framed logo + translucent tab bar.
+   Fixed editorial navigation for the Michele Orefice visual system.
    ============================================================ */
 
 :root {
@@ -306,12 +304,13 @@ select:focus-visible {
   --site-header-line: rgba(174, 228, 238, 0.16);
 }
 
-/* The legacy header becomes the persistent brand rail. */
+/* Persistent personal-brand rail. */
 #header.brand-site-header {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 1000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
@@ -320,6 +319,7 @@ select:focus-visible {
   margin: 0;
   padding: 0 max(1.4rem, calc((100vw - var(--container-wide)) / 2));
   background: var(--site-header-bg);
+  color: #fff;
   border-bottom: 1px solid var(--site-header-line);
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
@@ -393,6 +393,7 @@ select:focus-visible {
   color: #fff;
   line-height: normal;
   pointer-events: none;
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 #nav.brand-nav .brand-nav__links {
@@ -563,10 +564,12 @@ select:focus-visible {
 }
 
 #nav.brand-nav .brand-nav__social li {
+  display: inline-block;
   padding: 0;
 }
 
 #nav.brand-nav .brand-nav__social a.icon {
+  position: relative;
   display: grid;
   place-items: center;
   width: 2.2rem;
@@ -589,8 +592,7 @@ body.brand-inner-page #main {
 
 /* ------------------------------------------------------------
    Mobile navigation panel
-   Keep Massively's robust slide-out behaviour, but completely
-   restyle the surface and hierarchy.
+   Compact slide-out navigation with project-owned structure and styling.
    ------------------------------------------------------------ */
 @media screen and (max-width: 980px) {
   :root {
@@ -653,10 +655,15 @@ body.brand-inner-page #main {
   #navPanel .close {
     top: 1.15rem;
     right: 1.15rem;
+    display: grid;
+    place-items: center;
     width: 2.5rem;
     height: 2.5rem;
+    padding: 0;
     border: 1px solid rgba(255, 255, 255, 0.13);
     border-radius: 50%;
+    line-height: 1;
+    text-align: center;
   }
 
   #navPanel .brand-nav__links {
@@ -768,8 +775,7 @@ body.brand-inner-page #main {
 
 /* ============================================================
    STEP 03 — Homepage hero
-   Replaces Massively's fullscreen photograph with a product-led,
-   football-data composition built from real Match Explorer output.
+   Product-led football-data composition built from real Match Explorer output.
    ============================================================ */
 
 /* The portfolio background now lives directly on the wrapper; no JS-injected
@@ -785,7 +791,7 @@ body.brand-inner-page #main {
   background-repeat: no-repeat;
 }
 
-/* Neutralise old Intro/Header coupling from Massively. */
+/* Keep the intro/header relationship neutral under the fixed navigation. */
 #intro + #header.brand-site-header,
 #intro.hidden + #header.brand-site-header {
   margin-top: 0;
@@ -815,6 +821,11 @@ body.is-preload #intro:not(.hidden) + #header.brand-site-header + #nav.brand-nav
   cursor: default;
   text-align: left;
   isolation: isolate;
+}
+
+#intro.brand-hero strong,
+#intro.brand-hero b {
+  color: #fff;
 }
 
 #intro.brand-hero::before {
@@ -1840,7 +1851,7 @@ body.is-preload #intro.brand-hero {
 
 /* About is no longer the first thing a visitor sees after the hero. */
 #main > #about {
-  scroll-margin-top: calc(var(--site-header-height) + 1.25rem);
+  scroll-margin-top: var(--site-header-height);
 }
 
 @media screen and (max-width: 1080px) {
@@ -2627,7 +2638,7 @@ body.is-preload #intro.brand-hero {
   transform: translate(0.15rem, -0.15rem);
 }
 
-/* The legacy Massively .posts grid is no longer part of the home hierarchy. */
+/* The legacy .posts grid is no longer part of the home hierarchy. */
 #main > .brand-lab-home + .brand-more-work {
   border-top: 0;
 }
@@ -2696,7 +2707,7 @@ body.is-preload #intro.brand-hero {
     radial-gradient(circle at 88% 18%, rgba(68, 185, 209, 0.13), transparent 26rem),
     linear-gradient(135deg, #082b3d 0%, var(--brand-ink) 56%, #0d3c50 100%);
   color: #fff;
-  scroll-margin-top: calc(var(--site-header-height) + 1.25rem);
+  scroll-margin-top: var(--site-header-height);
   text-align: left;
 }
 
@@ -3279,7 +3290,7 @@ body.is-preload #intro.brand-hero {
     radial-gradient(circle at 5% 90%, rgba(241, 120, 91, 0.08), transparent 25rem),
     linear-gradient(145deg, #061f2d 0%, var(--brand-ink) 58%, #0b3448 100%);
   color: #fff;
-  scroll-margin-top: calc(var(--site-header-height) + 1rem);
+  scroll-margin-top: var(--site-header-height);
   text-align: left;
 }
 
@@ -3712,7 +3723,7 @@ body {
   text-wrap: balance;
 }
 
-/* Explicitly neutralise the last text-justification rules inherited from Massively. */
+/* Explicitly neutralise generic text-justification on branded content. */
 .brand-selected-work__header > p,
 .brand-featured-project__body,
 .brand-featured-project__features li,
@@ -4071,7 +4082,7 @@ body {
    PHASE 2B.3 / 2B.4a — Header vertical breathing room
    The rail is slightly taller and every visible control is shifted
    together. The intro-coupled selectors are repeated intentionally
-   so Massively cannot reset the personal signature on the homepage.
+   so earlier homepage selectors cannot reset the personal signature.
    ============================================================ */
 #header.brand-site-header .brand-signature,
 #intro + #header.brand-site-header .brand-signature,
@@ -4413,14 +4424,12 @@ body.brand-thankyou-page {
     content: none;
   }
 
-  #navPanel .close span {
+  #navPanel .brand-nav-close-icon {
     display: block;
-    color: currentColor;
-    font-family: var(--font-sans);
-    font-size: 1.85rem;
-    font-weight: 300;
-    line-height: 2.25rem;
-    text-align: center;
+    width: 1.15rem;
+    height: 1.15rem;
+    overflow: visible;
+    pointer-events: none;
   }
 }
 
@@ -4530,4 +4539,16 @@ body.brand-thankyou-page {
   .brand-footer__links {
     gap: 0.5rem 0.85rem;
   }
+}
+
+
+/* ============================================================
+   PHASE 2B.7b — EXACT ANCHOR ALIGNMENT
+   site.js now uses the rendered header height for homepage section
+   navigation. These margins remain as the no-JS/native fallback.
+   ============================================================ */
+#main > #projects,
+#main > #about,
+#main > #contact {
+  scroll-margin-top: var(--site-header-height);
 }

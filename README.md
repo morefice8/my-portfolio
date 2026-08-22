@@ -21,7 +21,7 @@ This website serves as a central hub for my work, demonstrating my expertise in 
 
 ## 🛠️ Technologies Used
 
-This portfolio was built using a combination of modern web technologies and is based on the "Massively" template by [HTML5 UP](https://html5up.net/).
+This portfolio was originally bootstrapped from the "Massively" template by [HTML5 UP](https://html5up.net/). The current design system, CSS foundation and JavaScript runtime are custom to this project.
 
 *   **Frontend:** HTML5, CSS3
 *   **Contact Form:** Powered by [FormSubmit](https://formsubmit.co/)

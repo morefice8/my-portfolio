@@ -1,9 +1,8 @@
-/* Weekly match analysis articles — add after main.css */
+/* Weekly match analysis articles — loaded after base.css and brand.css */
 
 /* Article layout
-   HTML5 UP's #main > * rule has higher specificity than .analysis-shell and
-   was forcing margin: 0, leaving the article visually stuck to the left.
-   We reset that direct-child layout here and centre each editorial block. */
+   The shared #main > * shell has higher specificity than .analysis-shell.
+   Reset that direct-child layout here and centre each editorial block. */
 #main > .analysis-shell {
   width: 100%;
   max-width: none;
@@ -438,8 +437,8 @@
 }
 
 
-/* Desktop navigation: the Italian page now has one extra section, so the
-   stock Massively spacing can push the social icons outside the nav. */
+/* Desktop navigation: compact spacing prevents the social controls from
+   being pushed outside the navigation rail. */
 @media screen and (min-width: 981px) {
   #nav ul.links {
     min-width: 0;
@@ -1168,9 +1167,8 @@
    Tighten the editorial hierarchy and force the intended Lab layout.
    ============================================================ */
 
-/* The Lab index deliberately overrides the generic Massively direct-child
-   spacing. Keeping the rules explicit here also makes cache/debug issues much
-   easier to spot when iterating on the editorial landing page. */
+/* The Lab index deliberately overrides the generic direct-child shell
+   spacing. Keeping the rules explicit here makes editorial iteration easier. */
 .lab-index-page #main > .lab-index-hero,
 .lab-index-page #main > .lab-index-latest,
 .lab-index-page #main > .lab-index-method {
@@ -2400,7 +2398,7 @@ html[lang="fr"] .lab-article-body .analysis-method::before {
    the fixed header. Reading/content widths remain constrained internally.
    ============================================================ */
 
-/* Remove Massively's 72rem page shell from both editorial surfaces. */
+/* Remove the shared 72rem page shell from both editorial surfaces. */
 body.lab-index-page #main,
 body.lab-article-page #main {
   width: 100%;

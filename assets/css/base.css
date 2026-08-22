@@ -1,0 +1,239 @@
+/* Michele Orefice — site foundation
+   Minimal reset, typography and structural primitives shared by the portfolio
+   and editorial pages. Loaded before brand.css. */
+
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; -webkit-text-size-adjust: none; -ms-overflow-style: scrollbar; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote::before, blockquote::after, q::before, q::after { content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+mark { background-color: transparent; color: inherit; }
+input, select, textarea { appearance: none; }
+
+@media screen and (max-width: 480px) {
+  html, body { min-width: 320px; }
+}
+
+html { box-sizing: border-box; font-size: 16pt; }
+*, *::before, *::after { box-sizing: inherit; }
+body { background-color: #1e252d; }
+body.is-preload *, body.is-preload *::before, body.is-preload *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+@media screen and (max-width: 1680px) { html { font-size: 12pt; } }
+@media screen and (max-width: 1280px) { html { font-size: 11pt; } }
+@media screen and (max-width: 360px) { html { font-size: 10pt; } }
+
+body,
+input,
+select,
+textarea {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 2.375;
+}
+
+a {
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  color: #212931;
+  text-decoration: none;
+}
+a:hover { border-bottom-color: transparent; color: #18bfef !important; }
+strong, b { font-weight: 600; }
+em, i { font-style: italic; }
+p { margin: 0 0 2rem; text-align: justify; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { border-bottom: 0; color: inherit; text-decoration: none; }
+h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 2rem; }
+h2 { font-size: 1.75rem; line-height: 1.3; margin-bottom: 1.5rem; }
+h3 { font-size: 1.25rem; margin-bottom: 1.5rem; }
+h4 { font-size: 1rem; }
+h5 { font-size: 0.9rem; }
+h6 { font-size: 0.8rem; }
+sub { font-size: 0.8rem; position: relative; top: 0.5rem; }
+sup { font-size: 0.8rem; position: relative; top: -0.5rem; }
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+  appearance: none;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.075em;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 2px #212931;
+  color: #212931 !important;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover { box-shadow: inset 0 0 0 2px #18bfef; color: #18bfef !important; }
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+input[type="button"]:disabled,
+button:disabled,
+.button:disabled { pointer-events: none; opacity: 0.25; }
+
+@media screen and (max-width: 980px) {
+  input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+    font-size: 0.9rem;
+    height: 3.25rem;
+    line-height: 3.25rem;
+  }
+}
+
+/* Forms */
+form { margin: 0 0 2rem; }
+form > :last-child { margin-bottom: 0; }
+label {
+  display: block;
+  font-weight: 900;
+  line-height: 1.5;
+  letter-spacing: 0.075em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 0 0 0.75rem;
+  color: #212931;
+}
+@media screen and (max-width: 980px) { label { font-size: 0.9rem; } }
+
+input[type="text"],
+input[type="email"],
+textarea {
+  appearance: none;
+  background: transparent;
+  border-radius: 0;
+  border: solid 2px #eeeeee;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 0 1rem;
+  text-decoration: none;
+  width: 100%;
+}
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+textarea:invalid { box-shadow: none; }
+input[type="text"], input[type="email"] { height: 3rem; }
+textarea { padding: 0.75rem 1rem; }
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus { border-color: #18bfef; }
+::placeholder { color: #909498; opacity: 1; }
+
+/* Lists and quiet utility labels */
+.icon > .label { display: none; }
+ul.icons { cursor: default; list-style: none; padding-left: 0; }
+ol { list-style: decimal; margin: 0 0 2rem; padding-left: 1.25rem; }
+ol li { padding-left: 0.25rem; }
+ul { list-style: disc; margin: 0 0 2rem; padding-left: 1rem; }
+ul li { padding-left: 0.5rem; }
+
+/* Current editorial convention: decks directly under semantic headers are italic. */
+header { cursor: default; }
+header > p { font-style: italic; }
+header > h1 + p { font-size: 1.1rem; margin-top: -0.5rem; line-height: 2; }
+header > h2 + p { font-size: 1rem; margin-top: -0.75rem; }
+header > h3 + p { font-size: 0.9rem; margin-top: -0.75rem; }
+header > h4 + p { font-size: 0.8rem; margin-top: -0.75rem; }
+@media screen and (max-width: 980px) { header br { display: none; } }
+
+/* Site shell */
+#wrapper {
+  transition: opacity 0.5s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#main {
+  background-color: #ffffff;
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - 4rem);
+  max-width: 72rem;
+  z-index: 2;
+}
+#main > * { padding: 4rem 4rem 2rem; border-top: solid 2px #eeeeee; margin: 0; }
+#main > *:first-child { border-top: 0; }
+@media screen and (max-width: 736px) { #main > * { padding: 2rem 2rem 0.1rem; } }
+@media screen and (max-width: 480px) { #main { width: 100%; } }
+
+/* Mobile navigation structure. Visual styling lives in brand.css. */
+#navPanelToggle { display: none; position: fixed; z-index: 10001; text-decoration: none; }
+#navPanel {
+  transform: translateX(20rem);
+  transition: transform 0.5s ease, box-shadow 0.5s ease, visibility 0.5s;
+  display: none;
+  height: 100%;
+  max-width: 80%;
+  overflow-y: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  width: 20rem;
+  z-index: 10002;
+}
+#navPanel .links { list-style: none; padding-left: 0; }
+#navPanel .close { position: absolute; cursor: pointer; }
+
+@media screen and (max-width: 980px) {
+  #navPanelToggle { display: block; }
+  #navPanel { display: block; }
+  body.is-navPanel-visible #wrapper { opacity: 0.5; }
+  body.is-navPanel-visible #navPanel {
+    transform: translateX(0);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+    visibility: visible;
+  }
+}
+#navPanel .links li { border-top: solid 2px #eeeeee; }
+#navPanel .links li:first-child { border-top: 0; }
+#navPanel .close { color: #909498; }
