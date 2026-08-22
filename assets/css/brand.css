@@ -772,9 +772,9 @@ body.brand-inner-page #main {
    football-data composition built from real Match Explorer output.
    ============================================================ */
 
-/* Retire the legacy photographic background on the portfolio home. */
-#wrapper > .bg,
-#wrapper > .bg.fixed {
+/* The portfolio background now lives directly on the wrapper; no JS-injected
+   parallax layer is needed. */
+#wrapper {
   background-color: #071f2d;
   background-image:
     radial-gradient(circle at 78% 11%, rgba(68, 185, 209, 0.12), transparent 31rem),
@@ -4370,5 +4370,99 @@ body.brand-thankyou-page {
   .brand-thankyou__card {
     margin: 1.5rem 0;
     padding: 1.4rem;
+  }
+}
+
+
+/* ============================================================
+   PHASE 2B.6 — LIGHTWEIGHT RUNTIME
+   Vanilla mobile navigation + inline social SVGs replace the legacy
+   jQuery/Scrollex/Font Awesome loading chain.
+   ============================================================ */
+.brand-social-icon {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+#nav.brand-nav .brand-nav__social a.brand-social-link,
+#navPanel .brand-nav__social a.brand-social-link {
+  line-height: 1;
+}
+
+@media screen and (max-width: 980px) {
+  #nav.brand-nav {
+    display: none;
+  }
+
+  body.is-navPanel-visible {
+    overflow: hidden;
+  }
+
+  #navPanel .brand-nav__tools {
+    position: static;
+    top: auto;
+    right: auto;
+    height: auto;
+    pointer-events: auto;
+  }
+
+  #navPanel .close::before {
+    display: none;
+    content: none;
+  }
+
+  #navPanel .close span {
+    display: block;
+    color: currentColor;
+    font-family: var(--font-sans);
+    font-size: 1.85rem;
+    font-weight: 300;
+    line-height: 2.25rem;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   PHASE 2B.6a — MOBILE REGRESSION FIX
+   Restore the single-column contact composition after the late desktop
+   contact refinements in Step 10 overrode the earlier tablet breakpoint.
+   ============================================================ */
+@media screen and (max-width: 980px) {
+  .brand-contact__inner {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 2.5rem;
+  }
+
+  .brand-contact__intro,
+  .brand-contact__form {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .brand-contact__inner {
+    width: min(100%, calc(100% - 2rem));
+    gap: 2rem;
+  }
+
+  .brand-contact__intro h2 {
+    max-width: 11ch;
+    font-size: clamp(2.2rem, 11vw, 3.05rem);
+    line-height: 0.96;
+  }
+
+  .brand-contact__lead {
+    max-width: 34rem;
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .brand-contact__form {
+    padding: 1.15rem;
+    border-radius: 1.1rem;
   }
 }

@@ -2430,3 +2430,43 @@ body.brand-inner-page.lab-index-page #main {
     padding-top: calc(var(--site-header-height) + 2rem);
   }
 }
+
+/* ============================================================
+   PHASE 2B.6a — MOBILE ARTICLE HERO CLEARANCE
+   The fixed site rail overlays page content. On narrow screens the former
+   3.2rem hero padding placed the article back-link entirely behind it and
+   left only the bottom of the Lab lockup visible. Reserve the rail height.
+   ============================================================ */
+@media screen and (max-width: 980px) {
+  .lab-article-page #main > .lab-article .lab-article-hero {
+    padding-top: calc(var(--site-header-height) + 2rem);
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .lab-article-page #main > .lab-article .lab-article-hero {
+    padding-top: calc(var(--site-header-height) + 1.6rem);
+  }
+
+  .lab-article-hero__topline {
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.15rem;
+  }
+
+  .lab-article-back {
+    min-width: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.085em;
+    white-space: nowrap;
+  }
+
+  .lab-article-lockup {
+    flex: 0 0 auto;
+  }
+
+  .lab-article-lockup img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
