@@ -3358,3 +3358,467 @@ body.brand-inner-page.lab-index-page #main {
     display: none;
   }
 }
+
+/* === NAPOLI COMO PREMATCH COMPONENTS START === */
+/* Local editorial components built on the existing Il Lab dell'8 system. */
+.como-prematch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+
+.como-prematch-cover figcaption strong,
+.como-prematch-body .analysis-figure figcaption strong {
+  color: var(--brand-blue, #0b6b88);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.como-prematch-body .analysis-figure figcaption::before {
+  content: none;
+}
+
+.como-dual-figure {
+  margin: 2.8rem 0 3.3rem !important;
+}
+
+.como-dual-figure__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.como-dual-figure__panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(16,53,77,0.10);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1.1rem 2.8rem rgba(16,53,77,0.07);
+}
+
+.como-dual-figure__label {
+  display: block;
+  padding: 0.72rem 0.9rem;
+  border-bottom: 1px solid rgba(16,53,77,0.08);
+  background: rgba(237,244,246,0.76);
+  color: var(--brand-blue, #0b6b88);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.como-dual-figure__panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.como-paz-figure .como-dual-figure__panel img {
+  aspect-ratio: 1.9 / 1;
+  object-fit: cover;
+  object-position: center;
+}
+
+.como-sequence-visual {
+  display: grid;
+  gap: 1.25rem;
+  margin: 2.8rem 0 3.3rem;
+  padding: clamp(1.25rem, 2.4vw, 1.8rem);
+  border: 1px solid rgba(16,53,77,0.12);
+  border-radius: 1.2rem;
+  background:
+    linear-gradient(135deg, rgba(174,228,238,0.12), rgba(255,255,255,0.94)),
+    #fff;
+  box-shadow: 0 1rem 2.8rem rgba(16,53,77,0.06);
+}
+
+.como-sequence-visual__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.como-sequence-visual__head > div {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.como-sequence-visual__head strong {
+  color: var(--brand-ink, #10354d);
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.2;
+}
+
+.como-sequence-visual__figure {
+  color: var(--brand-coral, #f1785b);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.como-sequence-visual__time {
+  flex: 0 0 auto;
+  padding: 0.48rem 0.68rem;
+  border: 1px solid rgba(11,107,136,0.16);
+  border-radius: 999px;
+  background: rgba(174,228,238,0.18);
+  color: var(--brand-blue, #0b6b88);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.como-sequence-track {
+  display: flex;
+  align-items: stretch;
+  gap: 0.55rem;
+}
+
+.como-sequence-step {
+  display: grid;
+  flex: 1 1 0;
+  min-width: 0;
+  align-content: center;
+  gap: 0.18rem;
+  min-height: 5.3rem;
+  padding: 0.85rem;
+  border: 1px solid rgba(16,53,77,0.10);
+  border-radius: 0.9rem;
+  background: #fff;
+}
+
+.como-sequence-step > span {
+  color: rgba(11,107,136,0.52);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.como-sequence-step strong {
+  color: var(--brand-ink, #10354d);
+  font-size: 0.88rem;
+  line-height: 1.25;
+}
+
+.como-sequence-step small {
+  color: rgba(16,53,77,0.58);
+  font-size: 0.7rem;
+  line-height: 1.3;
+}
+
+.como-sequence-step--accent {
+  border-color: rgba(241,120,91,0.28);
+  background: rgba(241,120,91,0.08);
+}
+
+.como-sequence-arrow {
+  display: grid;
+  flex: 0 0 1rem;
+  place-items: center;
+  color: var(--brand-coral, #f1785b);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.como-sequence-visual__caption {
+  margin: 0 !important;
+  color: rgba(16,53,77,0.70) !important;
+  font-size: 0.86rem !important;
+  line-height: 1.6 !important;
+}
+
+.como-sequence-phases {
+  display: grid;
+  grid-template-columns: 1.45fr 0.9fr;
+  gap: 1rem;
+}
+
+.como-sequence-phase {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1rem;
+  border: 1px solid rgba(16,53,77,0.09);
+  border-radius: 1rem;
+  background: rgba(255,255,255,0.78);
+}
+
+.como-sequence-phase > span {
+  color: var(--brand-blue, #0b6b88);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.como-sequence-phase--accent {
+  border-color: rgba(241,120,91,0.18);
+  background: rgba(241,120,91,0.06);
+}
+
+.como-sequence-track--compact .como-sequence-step {
+  min-height: 4.5rem;
+}
+
+@media screen and (max-width: 980px) {
+  .como-dual-figure__grid,
+  .como-sequence-phases {
+    grid-template-columns: 1fr;
+  }
+
+  .como-paz-figure .como-dual-figure__panel img {
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .como-sequence-track {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .como-sequence-arrow {
+    min-height: 1rem;
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .como-sequence-visual {
+    margin: 2rem 0 2.6rem;
+    padding: 1rem;
+  }
+
+  .como-sequence-visual__head {
+    align-items: center;
+  }
+
+  .como-sequence-step {
+    min-height: 0;
+  }
+}
+/* === NAPOLI COMO PREMATCH COMPONENTS END === */
+
+/* === NAPOLI COMO PREMATCH V1.2 OVERFLOW FIX === */
+.como-sequence-visual,
+.como-sequence-track,
+.como-sequence-phases,
+.como-sequence-phase {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.como-sequence-visual {
+  overflow: hidden;
+}
+
+.como-sequence-track {
+  width: 100%;
+}
+
+.como-sequence-phases {
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.9fr);
+}
+
+.como-sequence-phase {
+  overflow: hidden;
+}
+
+.como-sequence-step {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  box-sizing: border-box;
+}
+
+.como-sequence-arrow {
+  min-width: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .como-sequence-phases {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* === END NAPOLI COMO PREMATCH V1.2 OVERFLOW FIX === */
+
+/* === NAPOLI COMO PREMATCH V1.3 SEQUENCE SOURCE === */
+.como-sequence-visual__source {
+  margin: -0.35rem 0 0 !important;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(16,53,77,0.08);
+  color: rgba(16,53,77,0.48) !important;
+  font-size: 0.67rem !important;
+  line-height: 1.45 !important;
+  letter-spacing: 0.015em;
+}
+/* === END NAPOLI COMO PREMATCH V1.3 SEQUENCE SOURCE === */
+
+/* === LAB LATEST + ARCHIVE V1 === */
+.lab-index-archive-v2 {
+  margin: 0;
+  padding: clamp(3rem, 6vw, 5.5rem) 1.5rem;
+  background: #eef5f7;
+  color: #10354d;
+}
+
+.lab-index-archive-v2__head,
+.lab-index-archive-v2__list {
+  width: min(100%, 1600px);
+  margin-inline: auto;
+}
+
+.lab-index-archive-v2__head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.65fr) minmax(0, 1.35fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: end;
+  margin-bottom: 1.5rem;
+}
+
+.lab-index-archive-v2__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 0;
+  color: #08728e;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.lab-index-archive-v2__eyebrow::before {
+  content: "";
+  width: 2.6rem;
+  height: 1px;
+  background: #ff6f4f;
+}
+
+.lab-index-archive-v2__eyebrow span {
+  color: #ff6f4f;
+}
+
+.lab-index-archive-v2 h2 {
+  margin: 0;
+  color: #10354d;
+  font-size: clamp(2rem, 3.6vw, 3.35rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+}
+
+.lab-index-archive-v2__list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.lab-index-archive-v2__item {
+  display: grid;
+  grid-template-columns: minmax(9.5rem, 0.7fr) minmax(0, 2.3fr) auto;
+  gap: 1.4rem;
+  align-items: center;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid rgba(16, 53, 77, 0.12);
+  border-radius: 0.9rem;
+  background: rgba(255,255,255,0.88);
+  color: #10354d;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.lab-index-archive-v2__item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(8, 114, 142, 0.35);
+  box-shadow: 0 14px 30px rgba(16, 53, 77, 0.08);
+}
+
+.lab-index-archive-v2__kicker {
+  color: #ff6f4f;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.lab-index-archive-v2__copy {
+  min-width: 0;
+}
+
+.lab-index-archive-v2__copy strong,
+.lab-index-archive-v2__copy span {
+  display: block;
+}
+
+.lab-index-archive-v2__copy strong {
+  margin-bottom: 0.28rem;
+  color: #10354d;
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+
+.lab-index-archive-v2__copy span {
+  color: rgba(16, 53, 77, 0.56);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.lab-index-archive-v2__cta {
+  white-space: nowrap;
+  color: #08728e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px dotted currentColor;
+}
+
+@media screen and (max-width: 736px) {
+  .lab-index-archive-v2 {
+    padding: 2.7rem 1.25rem 3.9rem;
+  }
+
+  .lab-index-archive-v2__head {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.35rem;
+  }
+
+  .lab-index-archive-v2__list {
+    gap: 1rem;
+  }
+
+  .lab-index-archive-v2__item {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 1rem 1.05rem;
+  }
+
+  .lab-index-archive-v2__cta {
+    justify-self: start;
+    margin-top: 0.2rem;
+  }
+}
+/* === END LAB LATEST + ARCHIVE V1 === */
+
+/* === LAB ARCHIVE MOBILE BOTTOM SPACE V1.3 === */
+@media screen and (max-width: 736px) {
+  body .lab-index-archive-v2 {
+    padding-bottom: 4.75rem !important;
+  }
+
+  body .lab-index-archive-v2__list {
+    gap: 1rem !important;
+    margin-bottom: 0 !important;
+  }
+
+  body .lab-index-archive-v2__item:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+/* === END LAB ARCHIVE MOBILE BOTTOM SPACE V1.3 === */
