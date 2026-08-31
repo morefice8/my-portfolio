@@ -1,0 +1,34 @@
+{
+  "image": "https://micheleorefice.com/images/og/napoli-como-2026-post-match.jpg",
+  "published_time": "2026-08-31",
+  "locales": {
+    "en": {
+      "file": "lab/napoli-como-2026-post-match.html",
+      "locale": "en_US",
+      "canonical": "https://micheleorefice.com/lab/napoli-como-2026-post-match.html",
+      "title": "Napoli–Como 1-2: when control changes shape | Il Lab dell'8",
+      "description": "Post-match analysis of Napoli–Como 1-2: Como control the first half through possession, territory and pressure, then protect the lead from a deeper, more compact structure."
+    },
+    "it": {
+      "file": "it/lab/napoli-como-2026-post-match.html",
+      "locale": "it_IT",
+      "canonical": "https://micheleorefice.com/it/lab/napoli-como-2026-post-match.html",
+      "title": "Napoli–Como 1-2: quando il controllo cambia forma | Il Lab dell'8",
+      "description": "Post-match Napoli–Como 1-2: il Como controlla il primo tempo attraverso possesso, territorio e pressione, poi protegge il vantaggio da una struttura più bassa e compatta."
+    },
+    "es": {
+      "file": "es/lab/napoli-como-2026-post-match.html",
+      "locale": "es_ES",
+      "canonical": "https://micheleorefice.com/es/lab/napoli-como-2026-post-match.html",
+      "title": "Napoli–Como 1-2: cuando el control cambia de forma | Il Lab dell'8",
+      "description": "Análisis post-partido de Napoli–Como 1-2: el Como controla la primera parte con posesión, territorio y presión y después protege la ventaja desde una estructura más baja y compacta."
+    },
+    "fr": {
+      "file": "fr/lab/napoli-como-2026-post-match.html",
+      "locale": "fr_FR",
+      "canonical": "https://micheleorefice.com/fr/lab/napoli-como-2026-post-match.html",
+      "title": "Napoli–Como 1-2 : quand le contrôle change de forme | Il Lab dell'8",
+      "description": "Analyse après-match de Napoli–Como 1-2 : le Como contrôle la première période par la possession, le territoire et le pressing, puis protège son avantage dans une structure plus basse et compacte."
+    }
+  }
+}

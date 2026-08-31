@@ -3822,3 +3822,49 @@ body.brand-inner-page.lab-index-page #main {
   }
 }
 /* === END LAB ARCHIVE MOBILE BOTTOM SPACE V1.3 === */
+
+
+/* ============================================================
+   Reusable LAB figure watermark
+   ============================================================ */
+.lab-figure-media { position: relative; }
+.lab-figure-media > img { display: block; width: 100%; height: auto; }
+.lab-figure-watermark {
+  position: absolute;
+  right: 0.9rem;
+  bottom: 0.9rem;
+  width: 2rem;
+  aspect-ratio: 1;
+  background: url("/images/lab/lab8-mark.webp") center / contain no-repeat;
+  opacity: 0.62;
+  pointer-events: none;
+  z-index: 3;
+}
+.lab-figure-watermark-left .lab-figure-watermark { right: auto; left: 0.9rem; }
+@media screen and (max-width: 736px) {
+  .lab-figure-watermark { width: 1.55rem; right: 0.7rem; bottom: 0.7rem; }
+  .lab-figure-watermark-left .lab-figure-watermark { right: auto; left: 0.7rem; }
+}
+
+/* Lightbox controls: keep SVG controls visible over dark imagery. */
+.analysis-lightbox__button { color: #fff !important; opacity: 1 !important; }
+.analysis-lightbox__button svg { display: block !important; color: #fff !important; fill: none !important; stroke: currentColor !important; }
+.analysis-lightbox__button svg *,
+.analysis-lightbox__button path,
+.analysis-lightbox__button line,
+.analysis-lightbox__button polyline { stroke: currentColor !important; }
+
+/* === LAB LIGHTBOX FIGURE LABEL UTILITY === */
+.lab-lightbox-figure-label {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+/* === END LAB LIGHTBOX FIGURE LABEL UTILITY === */
