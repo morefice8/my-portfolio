@@ -3868,3 +3868,84 @@ body.brand-inner-page.lab-index-page #main {
   border: 0 !important;
 }
 /* === END LAB LIGHTBOX FIGURE LABEL UTILITY === */
+
+/* === INTER–NAPOLI PRE-MATCH v1 === */
+.inter-prematch-article .lab-article-cover .lab-figure-media,
+.inter-prematch-article .analysis-figure .lab-figure-media {
+  position: relative;
+}
+
+.inter-prematch-article .inter-structure-figure {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.inter-prematch-article .inter-structure-figure .lab-figure-media {
+  background: #eef5f8;
+}
+
+.inter-prematch-article .inter-structure-figure img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 736px) {
+  .inter-prematch-article .inter-structure-figure {
+    max-width: none;
+  }
+}
+/* === END INTER–NAPOLI PRE-MATCH v1 === */
+
+
+/* === INTER–NAPOLI MATCH SAMPLE === */
+.inter-prematch-article .lab-article-sidebar__sample {
+  display: grid;
+  gap: 0.28rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.inter-prematch-article .lab-article-sidebar__sample small {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.inter-prematch-article .lab-article-sidebar__sample .lab-sample-group {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.inter-prematch-article .lab-article-sidebar__sample .lab-sample-group:first-child {
+  margin-top: 0;
+}
+/* === END INTER–NAPOLI MATCH SAMPLE === */
+
+/* === INTER–NAPOLI SECTION LABELS FIX === */
+.inter-prematch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END INTER–NAPOLI SECTION LABELS FIX === */
+
+/* === LAB INDEX EYEBROW ALIGNMENT FIX === */
+/*
+ * The global paragraph rule uses text-align: justify.
+ * On the narrow uppercase eyebrow column this creates very large spaces
+ * between words, especially in EN. Keep the editorial tracking, but
+ * explicitly restore normal left alignment for this component.
+ */
+.lab-index-section-eyebrow {
+  text-align: left !important;
+  word-spacing: normal !important;
+  justify-content: flex-start;
+}
+
+.lab-index-section-eyebrow::before {
+  flex: 0 0 2.2rem;
+}
+/* === END LAB INDEX EYEBROW ALIGNMENT FIX === */
