@@ -4552,3 +4552,86 @@ body.brand-thankyou-page {
 #main > #contact {
   scroll-margin-top: var(--site-header-height);
 }
+
+/* === NAPOLI–ARSENAL HOME MOBILE METRICS FIX v2 === */
+@media screen and (max-width: 736px) {
+  /*
+   * Keep the original staggered/dynamic composition used by the Home card.
+   * The only change is to constrain the two lower cards enough to prevent
+   * long translated labels from expanding into each other.
+   */
+  .brand-lab-story__visual {
+    min-height: 24rem;
+    padding-bottom: 5.4rem;
+  }
+
+  .brand-lab-story__metric--long,
+  .brand-lab-story__metric--transition {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .brand-lab-story__metric--long {
+    left: 0;
+    right: auto;
+    bottom: 0.7rem;
+    width: 41%;
+    max-width: 11rem;
+    transform: rotate(1.1deg);
+  }
+
+  .brand-lab-story__metric--transition {
+    left: auto;
+    right: 0;
+    bottom: -0.15rem;
+    width: 49%;
+    max-width: 13rem;
+    transform: rotate(-0.7deg);
+  }
+
+  .brand-lab-story__metric span {
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /*
+   * On narrow phones keep the same diagonal rhythm instead of stacking.
+   * The second card is slightly wider because its label is longer.
+   */
+  .brand-lab-story__visual {
+    min-height: 24.5rem;
+    padding-bottom: 5.8rem;
+  }
+
+  .brand-lab-story__metric--long {
+    left: 0;
+    right: auto;
+    bottom: 0.8rem;
+    width: 40%;
+    max-width: none;
+  }
+
+  .brand-lab-story__metric--transition {
+    left: auto;
+    right: 0;
+    bottom: -0.1rem;
+    width: 52%;
+    max-width: none;
+  }
+
+  .brand-lab-story__metric--long strong,
+  .brand-lab-story__metric--transition strong {
+    font-size: 1.2rem;
+  }
+
+  .brand-lab-story__metric--long span,
+  .brand-lab-story__metric--transition span {
+    font-size: 0.43rem;
+    line-height: 1.28;
+  }
+}
+/* === END NAPOLI–ARSENAL HOME MOBILE METRICS FIX v2 === */

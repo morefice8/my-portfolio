@@ -3949,3 +3949,251 @@ body.brand-inner-page.lab-index-page #main {
   flex: 0 0 2.2rem;
 }
 /* === END LAB INDEX EYEBROW ALIGNMENT FIX === */
+
+/* === NAPOLI–ARSENAL PRE-MATCH v3 === */
+.arsenal-prematch-article .lab-article-cover .lab-figure-media,
+.arsenal-prematch-article .analysis-figure .lab-figure-media {
+  position: relative;
+}
+
+.arsenal-prematch-body {
+  counter-reset: lab-section lab-figure 1;
+}
+
+.arsenal-prematch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+
+.arsenal-ucl-badge {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: -1.25rem 0 1.55rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 0.9rem;
+  background: rgba(5,22,34,0.42);
+  backdrop-filter: blur(8px);
+}
+
+.arsenal-ucl-badge__title {
+  color: #f4f7fb;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.arsenal-ucl-badge__sep {
+  color: rgba(255,255,255,0.38);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.arsenal-ucl-badge__detail {
+  color: #8fdcff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.arsenal-prematch-article .lab-article-sidebar__sample {
+  display: grid;
+  gap: 0.28rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.arsenal-prematch-article .lab-article-sidebar__sample small {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.arsenal-prematch-article .lab-article-sidebar__sample .lab-sample-group {
+  display: block;
+  margin-top: 0.42rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.arsenal-prematch-article .lab-article-sidebar__sample .lab-sample-group:first-child {
+  margin-top: 0;
+}
+
+.arsenal-panel-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.arsenal-panel-grid--four {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+
+.arsenal-panel-grid--two {
+  grid-template-columns: repeat(2, minmax(0,1fr));
+}
+
+.arsenal-panel {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(16,53,77,0.09);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1.1rem 2.4rem rgba(16,53,77,0.07);
+}
+
+.arsenal-panel > span {
+  display: block;
+  padding: 0.62rem 0.8rem 0.55rem;
+  border-bottom: 1px solid rgba(16,53,77,0.08);
+  color: rgba(16,53,77,0.6);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lab-article-body .arsenal-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+@media screen and (max-width: 736px) {
+  .arsenal-ucl-badge {
+    margin-top: -0.7rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .arsenal-ucl-badge {
+    gap: 0.42rem 0.55rem;
+    padding: 0.68rem 0.82rem;
+  }
+
+  .arsenal-ucl-badge__title,
+  .arsenal-ucl-badge__detail {
+    font-size: 0.68rem;
+  }
+
+  .arsenal-panel-grid--four,
+  .arsenal-panel-grid--two {
+    grid-template-columns: 1fr;
+  }
+}
+/* === END NAPOLI–ARSENAL PRE-MATCH v3 === */
+
+/* === LAB COMPETITION + ROUND BADGES v1 === */
+.lab-competition-badge {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: -1.25rem 0 1.55rem;
+  padding: 0.72rem 1rem;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 0.9rem;
+  background: rgba(5,22,34,0.42);
+  backdrop-filter: blur(8px);
+}
+
+.lab-competition-badge__competition {
+  color: #f4f7fb;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lab-competition-badge__sep {
+  color: rgba(255,255,255,0.38);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.lab-competition-badge__round {
+  color: #8fdcff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.lab-index-archive-v2__meta {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.18rem;
+}
+
+.lab-index-archive-v2__competition {
+  color: #08728e;
+  font-size: 0.59rem;
+  font-weight: 700;
+  letter-spacing: 0.085em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 736px) {
+  .lab-competition-badge {
+    gap: 0.42rem 0.55rem;
+    padding: 0.68rem 0.82rem;
+  }
+
+  .lab-competition-badge__competition,
+  .lab-competition-badge__round {
+    font-size: 0.68rem;
+  }
+
+  .lab-index-archive-v2__meta {
+    gap: 0.12rem;
+  }
+
+  .lab-index-archive-v2__competition {
+    font-size: 0.6rem;
+  }
+}
+/* === END LAB COMPETITION + ROUND BADGES v1 === */
+
+/* === LAB FEATURED METRICS NO-WRAP v3 === */
+.lab-index-featured__metrics div {
+  grid-template-columns: minmax(6.4rem, auto) minmax(0, 1fr);
+}
+
+.lab-index-featured__metrics strong {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.045em;
+}
+
+@media screen and (max-width: 736px) {
+  .lab-index-featured__metrics div {
+    grid-template-columns: minmax(6.2rem, auto) minmax(0, 1fr);
+  }
+}
+/* === END LAB FEATURED METRICS NO-WRAP v3 === */
+
+/* === LAB MOBILE LIGHTBOX CAPTION FIX v1 === */
+@media screen and (max-width: 736px) {
+  .analysis-lightbox__caption {
+    max-height: none;
+    overflow: visible;
+    line-height: 1.45;
+  }
+
+  .analysis-lightbox__footer {
+    max-height: 32vh;
+    overflow-y: auto;
+    align-items: center;
+  }
+}
+/* === END LAB MOBILE LIGHTBOX CAPTION FIX v1 === */
