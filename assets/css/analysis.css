@@ -4197,3 +4197,14 @@ body.brand-inner-page.lab-index-page #main {
   }
 }
 /* === END LAB MOBILE LIGHTBOX CAPTION FIX v1 === */
+
+/* === NAPOLI-FROSINONE SECTION LABELS === */
+.frosinone-prematch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END NAPOLI-FROSINONE SECTION LABELS === */
+
+/* === NAPOLI-FROSINONE MOBILE-FIRST FIGURES === */
+.nf-fig { max-width: 720px; margin-left: auto; margin-right: auto; }
+.nf-fig .lab-figure-media img { width: 100%; height: auto; display: block; }
+/* === END NAPOLI-FROSINONE MOBILE-FIRST FIGURES === */
