@@ -4208,3 +4208,9 @@ body.brand-inner-page.lab-index-page #main {
 .nf-fig { max-width: 720px; margin-left: auto; margin-right: auto; }
 .nf-fig .lab-figure-media img { width: 100%; height: auto; display: block; }
 /* === END NAPOLI-FROSINONE MOBILE-FIRST FIGURES === */
+
+/* === NAPOLI-FROSINONE POST-MATCH SECTION LABELS === */
+.frosinone-postmatch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END NAPOLI-FROSINONE POST-MATCH SECTION LABELS === */
