@@ -4214,3 +4214,9 @@ body.brand-inner-page.lab-index-page #main {
   content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
 }
 /* === END NAPOLI-FROSINONE POST-MATCH SECTION LABELS === */
+
+/* === VILLARREAL-NAPOLI SECTION LABELS === */
+.villarreal-prematch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END VILLARREAL-NAPOLI SECTION LABELS === */
