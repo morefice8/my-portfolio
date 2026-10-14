@@ -4220,3 +4220,9 @@ body.brand-inner-page.lab-index-page #main {
   content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
 }
 /* === END VILLARREAL-NAPOLI SECTION LABELS === */
+
+/* === VILLARREAL-NAPOLI POST-MATCH SECTION LABELS === */
+.villarreal-postmatch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END VILLARREAL-NAPOLI POST-MATCH SECTION LABELS === */
