@@ -4232,3 +4232,9 @@ body.brand-inner-page.lab-index-page #main {
   content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
 }
 /* === END VENEZIA-NAPOLI PRE-MATCH SECTION LABELS === */
+
+/* === VENEZIA-NAPOLI POST-MATCH SECTION LABELS === */
+.venezia-postmatch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END VENEZIA-NAPOLI POST-MATCH SECTION LABELS === */
