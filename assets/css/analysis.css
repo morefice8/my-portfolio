@@ -4238,3 +4238,9 @@ body.brand-inner-page.lab-index-page #main {
   content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
 }
 /* === END VENEZIA-NAPOLI POST-MATCH SECTION LABELS === */
+
+/* === NAPOLI-BODO PRE-MATCH SECTION LABELS === */
+.bodo-prematch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END NAPOLI-BODO PRE-MATCH SECTION LABELS === */
