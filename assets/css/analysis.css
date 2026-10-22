@@ -4250,3 +4250,9 @@ body.brand-inner-page.lab-index-page #main {
   content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
 }
 /* === END NAPOLI-BODO POST-MATCH SECTION LABELS === */
+
+/* === NAPOLI-ROMA PRE-MATCH SECTION LABELS === */
+.roma-prematch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END NAPOLI-ROMA PRE-MATCH SECTION LABELS === */
