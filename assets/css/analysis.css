@@ -4268,3 +4268,9 @@ body.brand-inner-page.lab-index-page #main {
   content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
 }
 /* === END MONZA-NAPOLI PRE-MATCH SECTION LABELS === */
+
+/* === MONZA-NAPOLI POST-MATCH SECTION LABELS === */
+.monza-postmatch-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END MONZA-NAPOLI POST-MATCH SECTION LABELS === */
