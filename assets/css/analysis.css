@@ -4274,3 +4274,9 @@ body.brand-inner-page.lab-index-page #main {
   content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
 }
 /* === END MONZA-NAPOLI POST-MATCH SECTION LABELS === */
+
+/* === SERIE A RECAP SECTION LABELS === */
+.srecap-body > h2::before {
+  content: attr(data-section-label) " · " counter(lab-section, decimal-leading-zero);
+}
+/* === END SERIE A RECAP SECTION LABELS === */
